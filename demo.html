@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JQueries/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(
+            function(){            
+                $("button").click(
+                    function(){
+                    value=document.getElementById("in1").value
+                    value1=document.getElementById("in2").value
+                    if(value!=""&&value1!="")
+                    {
+                        $(this).text("Login")
+                        document.getElementById("s1").innerHTML="Now you can login"
+                    }
+                    else
+                    {
+                        document.getElementById("s1").innerHTML="Enter full Detail"
+                    }
+                }
+                )
+
+            }
+        )
+        
+    </script>
+    <style>
+        #div1{
+            background-color: aquamarine;
+            border: 2px solid black;
+            width: 200px;
+            height: 130px;
+            text-align: center;
+            margin-top: 20%;
+            margin-left: 50%;
+            padding: 4%;
+
+        }
+        button{
+            border-radius: 20px;
+            height: 30px;
+        }
+        body{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            Enter name <input type="text" id="in1"><br>
+            Passwors <input type="password" id="in2">
+            <br><br><button>Generate OTP</button>
+            <br><span id="s1">Enter detail</span>
+        </div>
+    </div>
+</body>
+</html>
